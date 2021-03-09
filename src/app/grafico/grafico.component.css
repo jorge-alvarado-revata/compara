@@ -1,4 +1,7 @@
 table {
     width: 100%;
   }
-
+  .tamanio{
+    max-width: 100%;
+    height: auto;
+  }

@@ -61,8 +61,7 @@
         <div class="img-container">
             <div class ="box">
                 <img  [src]="imageToShow | safeHTML" alt="grafico resultado"
-                *ngIf="!isimageloading; else noImageFound">
-                <!-- *ngIf="!isimageloading; else noImageFound"-->
+                *ngIf="!isimageloading; else noImageFound" class="tamanio">
                 <ng-template #noImageFound>
                     <img src="assets/images/mcs_mix.png" alt="Fallbackimage">
                </ng-template>
