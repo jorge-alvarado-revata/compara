@@ -1,0 +1,43 @@
+<div class="compara-container">
+
+    <mat-form-field appearance="fill" >
+        <mat-label>Seleccionar</mat-label>
+        <mat-select formControlName="selplanes">
+            <mat-option *ngFor="let plan of planes" [value]="plan.id">
+                {{plan.nombre}}-{{plan.fecha_vigencia}} 
+            </mat-option>
+        </mat-select>
+        <mat-hint align="end">Planes de Estudio</mat-hint>
+      </mat-form-field>
+
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Seleccionar</mat-label>
+      <mat-select formControlName="selguias">
+            <mat-option *ngFor="let guia of guias" [value]="guia.id">
+                {{guia.nombre}}
+            </mat-option>
+      </mat-select>
+      <mat-hint align="end">Guias Internacionales</mat-hint>
+    </mat-form-field>
+
+    <mat-card class="compara-card">
+        <mat-card-header>
+          <div mat-card-avatar class="compara-header-image"></div>
+          <mat-card-title>Comparación de Guias y Planes</mat-card-title>
+          <mat-card-subtitle>Identificación de cursos comunes entre Guias y Planes de estudio</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="assets/images/H_sis2009_cmp_acm68_m1_mcs_mix.png" alt="">
+        <mat-card-content>
+          <p>
+
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+      
+</div>
+

@@ -1,0 +1,79 @@
+<div fxLayout="column" style="padding-top: 50px;">
+    <mat-card>
+        <mat-card-header>
+            <div mat-card-avatar class = "compara-header-image"></div>
+            <mat-card-title>1. Comparador de Guias y Carreras</mat-card-title>
+            <mat-card-subtitle>Métrica usando teoría de grafos</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content >
+                <div class="texto2">
+                    <p>
+                        La presente Web utiliza algoritmos de similaridad de grafos para realizar comparaciones entre planes de estudio de carreras de informática y modelos internacionales. El objetivo es poder visualizar la cercania o distancia de una propuesta educativa de informatica universitaria del pais y los distintos modelos de curricula que han aparecido en el tiempo.                    
+                    </p>
+                </div>       
+        </mat-card-content>
+    </mat-card>
+    
+    <mat-card>
+        <mat-card-header>
+            <div mat-card-avatar class = "compara-header-image"></div>
+            <mat-card-title>2. El método</mat-card-title>
+            <mat-card-subtitle>El proceso de trabajo</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content >
+                <div class="texto2">
+                    <p>
+                        Hemos codificado guias internacionales de ACM el referente mas conocido, desde su version ACM68, ACM2001 y ACM2013.
+                        Más adelante podremos codificar otras ediciones y de otros perfiles. 
+                        También hemos codificado planes de estudio de algunas universidades peruanas de carreras de informática o semejantes. Tales como
+                        como ingeniería de sistemas, ingenieria informatica. EL objetivo es verificar si representando estas guias y profesiones podemo encontrar cierto grado de similitud.
+                        Independiente del nombre de la profesión e independiente de llamarse ingeniería o ciencia informática.
+                     
+                    </p>
+                </div>       
+        </mat-card-content>
+    </mat-card>
+    <mat-card>
+        <mat-card-header>
+            <div mat-card-avatar class = "compara-header-image"></div>
+            <mat-card-title>3. Selección de opciones</mat-card-title>
+            <mat-card-subtitle>Ubique los planes de estudio y guia internacional a comparar</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content >
+            <div class="texto2">
+                <p>
+                    En las listas que se muestran a continuacion, se encuentran listados planes de estudio de algunas universidades y modelos internacionales de educacion en informatica. Selecciones un elemento por lista y luego presione el boton para mostrar las comparaciones disponibles.
+                </p>
+            </div>
+    <form [formGroup]="visorForm">
+    <div fxLayoutAlign="space-around none" >
+    <mat-form-field appearance="outline" fxFlex="50%" required>
+        <mat-label>Seleccionar</mat-label>
+        <mat-select formControlName="selplanes" placeholder="Planes de estudio"  required>
+            <mat-option *ngFor="let plan of planes" [value]="plan.id">
+                {{plan.nombre}}-{{plan.fecha_vigencia}} 
+            </mat-option>
+        </mat-select>
+        <mat-hint align="end">Planes de Estudio</mat-hint>
+    </mat-form-field>
+    </div>
+    <div fxLayoutAlign="space-around none">
+    <mat-form-field appearance="outline" fxFlex="50%" required>
+        <mat-label>Seleccionar</mat-label>
+        <mat-select formControlName="selguias" placeholder="Guias Internacionales" required>
+                <mat-option *ngFor="let guia of guias" [value]="guia.id">
+                    {{guia.nombre}}
+                </mat-option>
+        </mat-select>
+        <mat-hint align="end">Guias Internacionales</mat-hint>
+        </mat-form-field>
+    </div>
+    <div fxLayoutAlign="space-around none">
+        <mat-card-actions>
+        <button mat-flat-button color="primary" [disabled]="visorForm.invalid" (click)="grafica()" [disabled] >Comparar</button>
+        </mat-card-actions>
+    </div>
+    </form>
+    </mat-card-content>
+    </mat-card>
+</div>

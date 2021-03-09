@@ -1,0 +1,23 @@
+.home {
+    background-image: url('/assets/images/portada.png');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.compara-header-image {
+    background-image: url('/assets/images/logo.png');
+    background-size: cover;
+} 
+
+.texto {
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 40%; /* Adjust this value to move the positioned div up and down */
+    text-align: center;
+    width: 60%; /* Set the width of the positioned div */
+}
