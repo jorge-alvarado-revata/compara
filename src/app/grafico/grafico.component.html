@@ -10,7 +10,7 @@
             <mat-card-subtitle>Datos del plan: {{ dataPlan.nombre}}-{{ dataPlan.fecha_vigencia }} </mat-card-subtitle>
         </mat-card-header>
         <mat-card-content >
-            <mat-list role="list">
+            <mat-list role="list" class="lista">
                 <mat-list-item role="listitem">Nodos: {{resultados[0].nodoH}}</mat-list-item>
                 <mat-list-item role="listitem">Enlaces: {{resultados[0].enlaceH}}</mat-list-item>
               </mat-list>                
@@ -24,7 +24,7 @@
         <mat-card-subtitle>Datos de la guia: {{ dataGuia.nombre}}-{{ dataGuia.fecha_vigencia }} </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content >
-        <mat-list role="list">
+        <mat-list role="list" class="lista">
             <mat-list-item role="listitem">Nodos: {{resultados[0].nodoG}}</mat-list-item>
             <mat-list-item role="listitem">Enlaces: {{resultados[0].enlaceG}}</mat-list-item>
           </mat-list>                
@@ -38,7 +38,7 @@
         <mat-card-subtitle>Máximo común sub-grafo</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content >
-        <mat-list role="list">
+        <mat-list role="list" class="lista">
             <mat-list-item role="listitem">Nodos: {{resultados[0].nodoMCS}}</mat-list-item>
             <mat-list-item role="listitem">Enlaces: {{resultados[0].enlaceMCS}}</mat-list-item>
             <mat-list-item role="listitem">Métrica ged: {{resultados[0].ged}}</mat-list-item>
@@ -71,6 +71,26 @@
     </mat-card-content>
 
   </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+        <div mat-card-avatar class = "compara-header-image"></div>
+        <mat-card-title>Comentarios de Resultados</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content class="texto">
+
+        El grafico indicado y el valor GED, corresponde a una métrica definida por Bunke, establece
+    como medida de similaridad una proporción indicada en la siguiente imagen:
+    <p>
+    <img src="assets/images/formula.png" alt="metrica Bunke">
+</p> 
+    De manera que el valor resultante cuando mas cerca este del 0, mas similaridad se encuentra entre ambos grafos.
+    Este valor nos ayuda en la adopción de estandares en los programas de estudio así como también nos ayuda a entender el desarrollo en el tiempo de los programas de estudio.
+
+    </mat-card-content>
+</mat-card>
 
 </div>
 

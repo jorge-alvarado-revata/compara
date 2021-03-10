@@ -11,13 +11,20 @@
     background-size: cover;
 } 
 
-.texto {
+.texto1 {
     position: absolute;
     z-index: 999;
     margin: 0 auto;
     left: 0;
     right: 0;
     top: 40%; /* Adjust this value to move the positioned div up and down */
-    text-align: center;
+    text-align: justify;
     width: 60%; /* Set the width of the positioned div */
+}
+
+.texto {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 80%;
+    text-align: justify;  
 }
