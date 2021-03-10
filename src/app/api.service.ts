@@ -11,7 +11,6 @@ import { environment } from '../environments/environment';
 })
 export class ApiService {
 
-    //private SERVER_URL = "http://127.0.0.1:8000/compara/";
     private SERVER_URL = environment.apiUrl;
     constructor(private HttpClient: HttpClient) { }
 
@@ -35,6 +34,11 @@ export class ApiService {
 
     public sendGetRequestDetail(entidad: string, id: string): Observable<any> {
         let SERVER_FINAL:string = this.SERVER_URL + `${entidad}/${id}`; 
+        return this.HttpClient.get(SERVER_FINAL).pipe(catchError(this.handleError));
+    }
+
+    public sendGetRequestQueryDetail(entidad: string, id: string): Observable<any> {
+        let SERVER_FINAL:string = this.SERVER_URL + `?${entidad}=${id}`; 
         return this.HttpClient.get(SERVER_FINAL).pipe(catchError(this.handleError));
     }
 

@@ -17,7 +17,7 @@ import { IntroComponent } from './intro/intro.component';
 import { SeleComponent } from './sele/sele.component';
 import { GraficoComponent } from './grafico/grafico.component';
 import { DatatablaComponent } from './datatabla/datatabla.component';
-
+import { TablasComponent} from './tablas/tablas.component'
 
 @NgModule({
   declarations: [
@@ -27,6 +27,7 @@ import { DatatablaComponent } from './datatabla/datatabla.component';
     IntroComponent,
     SeleComponent,
     GraficoComponent,
+    TablasComponent,
     SafeHTMLPipe,
     DatatablaComponent,
 
