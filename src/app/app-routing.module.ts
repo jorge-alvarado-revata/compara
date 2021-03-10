@@ -4,6 +4,8 @@ import { AboutComponent } from './about/about.component';
 import { IntroComponent } from './intro/intro.component';
 import { SeleComponent } from './sele/sele.component';
 import { GraficoComponent } from './grafico/grafico.component';
+import { TablasComponent } from './tablas/tablas.component';
+import { DatatablaComponent } from './datatabla/datatabla.component';
 
 
 const routes: Routes = [
@@ -11,7 +13,9 @@ const routes: Routes = [
     { path: 'intro', component: IntroComponent},
     { path: 'sele', component: SeleComponent},
     { path: 'grafico/:guia/:plan', component: GraficoComponent},
+    { path: 'datatabla/:guia/:plan', component: DatatablaComponent},
     { path: 'about', component: AboutComponent},
+    { path: 'listado', component: TablasComponent},
 ];
 
 @NgModule({

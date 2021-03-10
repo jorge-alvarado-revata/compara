@@ -16,6 +16,7 @@ import { MainComponent } from './main/main.component';
 import { IntroComponent } from './intro/intro.component';
 import { SeleComponent } from './sele/sele.component';
 import { GraficoComponent } from './grafico/grafico.component';
+import { DatatablaComponent } from './datatabla/datatabla.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { GraficoComponent } from './grafico/grafico.component';
     SeleComponent,
     GraficoComponent,
     SafeHTMLPipe,
+    DatatablaComponent,
 
   ],
   imports: [

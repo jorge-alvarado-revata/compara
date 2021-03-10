@@ -75,7 +75,7 @@ export class SeleComponent implements OnInit {
         let guia = this.visorForm.get('selguias').value;
         let plan = this.visorForm.get('selplanes').value;
         var myurl = `/grafico/${guia}/${plan}`;
-        this.router.navigateByUrl(myurl, /* Removed unsupported properties by Angular migration: relativeTo. */ {}).then(e => {
+        this.router.navigateByUrl(myurl, {}).then(e => {
             if (e) {
                 console.log("Navigation is successful!");
             } else {

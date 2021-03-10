@@ -28,6 +28,11 @@ export class AppComponent {
             link: '/sele',
             index: 1
         }, 
+        {
+            label: 'LISTADO',
+            link: '/listado',
+            index: 2
+        }, 
     ];
         this.activeLink = this.navLinks[0];
   }
