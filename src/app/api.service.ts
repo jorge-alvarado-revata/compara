@@ -42,4 +42,9 @@ export class ApiService {
         return this.HttpClient.get(SERVER_FINAL).pipe(catchError(this.handleError));
     }
 
+    public sendGetRequestMCS(entidad1: string, entidad2: string): Observable<any> {
+        let SERVER_FINAL:string = this.SERVER_URL + `mcs/${entidad1}/${entidad2}`; 
+        return this.HttpClient.get(SERVER_FINAL).pipe(catchError(this.handleError));
+    }  
+
 }

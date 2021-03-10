@@ -40,3 +40,24 @@
     <div>Loading ...</div>
 </ng-template>
     
+<div *ngIf="dataMCS else loading3">
+
+    <div fxLayout="column" style="padding-top: 50px;">
+        <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar class = "compara-header-image"></div>
+                    <mat-card-title>3. MCS</mat-card-title>
+                    <mat-card-subtitle>Cursos comunes </mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <mat-list role="list" class="lista">
+                        <mat-list-item *ngFor="let curso of dataMCS">{{curso.id_cmp}} - {{curso.name}}</mat-list-item>
+                    </mat-list>                
+                </mat-card-content>
+        </mat-card>   
+    </div>
+</div>
+<ng-template #loading3>
+    <div>Loading ...</div>
+</ng-template>
+    
