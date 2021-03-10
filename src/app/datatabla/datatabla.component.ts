@@ -26,21 +26,23 @@ export class DatatablaComponent implements OnInit {
     const guia = this.route.snapshot.paramMap.get('guia');
     const plan = this.route.snapshot.paramMap.get('plan');
 //    this.getDataMCS(guia, plan);
-    this.getData('guia', guia);
-    this.getData('plan', plan);
+    this.getData('nodomodcurso','guia', guia);
+    this.getData('nodocurso','plan', plan);
   }
 
-  public getData(entidad: string, id: string){
+  public getData(servicio: string, entidad: string, id: string){
     this.errorMessage = "";
-    this.apiService.sendGetRequestQueryDetail(entidad, id)
+    this.apiService.sendGetRequestQueryDetail(servicio, entidad, id)
         .subscribe(
             (response) => {
                 console.log(response)
                 console.log('responde received');
-                if (entidad == "guia")
+                if (entidad == "guia") {
                     this.dataModCurso = response;
-                else if (entidad == "plan")
+                }
+                else if (entidad == "plan"){
                     this.dataCurso = response;
+                }
             },
             (error) => {
                 console.error('Request failed with error');

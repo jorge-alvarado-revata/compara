@@ -37,8 +37,8 @@ export class ApiService {
         return this.HttpClient.get(SERVER_FINAL).pipe(catchError(this.handleError));
     }
 
-    public sendGetRequestQueryDetail(entidad: string, id: string): Observable<any> {
-        let SERVER_FINAL:string = this.SERVER_URL + `?${entidad}=${id}`; 
+    public sendGetRequestQueryDetail(servicio: string, entidad: string, id: string): Observable<any> {
+        let SERVER_FINAL:string = this.SERVER_URL + `${servicio}/?${entidad}=${id}`; 
         return this.HttpClient.get(SERVER_FINAL).pipe(catchError(this.handleError));
     }
 
